@@ -1,0 +1,22 @@
+.central{
+    margin: 0 auto;
+    float: none;
+}
+
+.circulo {
+    border-radius: 50%;
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    border: 1px solid #000000;
+    background-color: #FFFF00;
+}
+
+.margemTop{
+    margin-top: 20px;
+}
+
+.letra{
+    font-family: Rockwell;
+    color: black;
+}
