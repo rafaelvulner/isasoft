@@ -1,5 +1,5 @@
 <html>
-    <title>Login</title>
+    <title>Mesas</title>
     <?php include './resources/utils/masterPage/head.html'; ?>
 
 
@@ -55,14 +55,13 @@
                     
                    
                     
-                    $.each(data, function(idx, obj){
-                       console.log(obj); 
-                       
+                    $.each(data, function(idx, obj){         
+                      
                        if (obj.id_comanda === null){
-                           $('#mesas').append('<div class="col-md-3 col-xs-6">Mesa '+obj.numMesa+'<a href="mesaPedido?id='+obj.numMesa+'"><img src="resources/img/btn_mesaVaga.png"></a></div>');
+                           $('#mesas').append('<div class="col-md-3 col-xs-6">Mesa '+obj.numMesa+'<a href="mesaPedido?numMesa=' +obj.numMesa+ '&&idComanda='+obj.id_comanda+'"><img src="resources/img/btn_mesaVaga.png"></a></div>');
                            
                        } else{
-                           $('#mesas').append('<div class="col-md-3 col-xs-6">Mesa '+obj.numMesa+'<a href="mesaPedido?id='+obj.numMesa+'"><img src="resources/img/btn_mesaOcupada.png"></a></div>');
+                           $('#mesas').append('<div class="col-md-3 col-xs-6">Mesa '+obj.numMesa+'<a href="mesaPedido?numMesa='+obj.numMesa+ '&&idComanda='+obj.id_comanda+'"><img src="resources/img/btn_mesaOcupada.png"></a></div>');
                        }   
 //}
                         
